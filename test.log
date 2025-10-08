@@ -1,0 +1,73 @@
+[2025-10-01 09:00:00] INFO auth: User 201 authenticated successfully
+[2025-10-01 09:00:01] INFO service: Task 2001 started
+[2025-10-01 09:00:01] INFO db: Connection established to db-primary:5432
+[2025-10-01 09:00:02] INFO cache: Cache hit for key=user:201
+[2025-10-01 09:00:03] INFO service: Task 2001 step=extract completed
+[2025-10-01 09:00:04] INFO db: Executed query SELECT orders WHERE id=3001 duration=24ms
+[2025-10-01 09:00:05] INFO service: Task 2001 step=transform completed
+[2025-10-01 09:00:06] INFO service: Task 2001 step=load completed
+[2025-10-01 09:00:06] INFO service: Task 2001 finished status=ok
+[2025-10-01 09:01:00] INFO health: Heartbeat ok
+[2025-10-01 09:01:05] INFO auth: User 202 authenticated successfully
+[2025-10-01 09:01:06] INFO service: Task 2002 started
+[2025-10-01 09:01:07] INFO cache: Cache miss for key=product:601
+[2025-10-01 09:01:08] INFO io: Read file /data/input/2002.csv size=9KB
+[2025-10-01 09:01:09] INFO db: Executed query SELECT products WHERE id=601 duration=17ms
+[2025-10-01 09:01:10] INFO service: Task 2002 step=extract completed
+[2025-10-01 09:01:11] INFO service: Task 2002 step=transform completed
+[2025-10-01 09:01:12] INFO service: Task 2002 step=load completed
+[2025-10-01 09:01:12] INFO service: Task 2002 finished status=ok
+[2025-10-01 09:02:00] INFO health: Heartbeat ok
+[2025-10-01 09:02:05] INFO monitoring: CPU usage=13% mem=35%
+[2025-10-01 09:02:10] INFO auth: User 203 authenticated successfully
+[2025-10-01 09:02:11] ERROR db: Connection timeout when querying db-primary:5432 duration=5000ms
+[2025-10-01 09:02:12] INFO service: Task 2003 started
+[2025-10-01 09:02:13] INFO cache: Cache miss for key=report:85
+[2025-10-01 09:02:14] INFO io: Read file /data/input/2003.csv size=4KB
+[2025-10-01 09:02:15] INFO service: Task 2003 step=extract completed
+[2025-10-01 09:02:16] INFO db: Executed query SELECT reports WHERE id=85 duration=19ms
+[2025-10-01 09:02:17] INFO service: Task 2003 step=transform completed
+[2025-10-01 09:02:18] INFO service: Task 2003 step=load completed
+[2025-10-01 09:02:18] INFO service: Task 2003 finished status=ok
+[2025-10-01 09:03:00] WARN monitoring: Memory usage spike: mem=92% (previous=35%)
+[2025-10-01 09:03:05] INFO auth: User 204 authenticated successfully
+[2025-10-01 09:03:06] INFO service: Task 2004 started
+[2025-10-01 09:03:07] INFO cache: Cache hit for key=user:204
+[2025-10-01 09:03:08] INFO service: Task 2004 step=extract completed
+[2025-10-01 09:03:09] INFO db: Executed query SELECT metrics WHERE id=120 duration=22ms
+[2025-10-01 09:03:10] INFO service: Task 2004 step=transform completed
+[2025-10-01 09:03:11] INFO service: Task 2004 step=load completed
+[2025-10-01 09:03:11] INFO service: Task 2004 finished status=ok
+[2025-10-01 09:03:30] ERROR auth: Unauthorized access attempt for user 999 ip=10.0.0.45
+[2025-10-01 09:04:00] INFO health: Heartbeat ok
+[2025-10-01 09:04:05] INFO monitoring: CPU usage=14% mem=36%
+[2025-10-01 09:04:10] INFO auth: User 205 authenticated successfully
+[2025-10-01 09:04:11] INFO service: Task 2005 started
+[2025-10-01 09:04:12] INFO cache: Cache miss for key=order:330
+[2025-10-01 09:04:13] INFO db: Executed query SELECT order WHERE id=330 duration=20ms
+[2025-10-01 09:04:14] INFO service: Task 2005 step=extract completed
+[2025-10-01 09:04:15] INFO service: Task 2005 step=transform completed
+[2025-10-01 09:04:16] INFO service: Task 2005 step=load completed
+[2025-10-01 09:04:16] INFO service: Task 2005 finished status=ok
+[2025-10-01 09:05:00] CRITICAL service: Unhandled exception: segmentation fault (signal 11)
+[2025-10-01 09:05:30] INFO recovery: Restarting service 'worker-1'
+[2025-10-01 09:05:35] INFO service: worker-1 started
+[2025-10-01 09:05:40] INFO auth: User 206 authenticated successfully
+[2025-10-01 09:05:41] INFO service: Task 2006 started
+[2025-10-01 09:05:42] INFO cache: Cache hit for key=user:206
+[2025-10-01 09:05:43] INFO db: Executed query SELECT customers WHERE id=501 duration=21ms
+[2025-10-01 09:05:44] INFO service: Task 2006 step=extract completed
+[2025-10-01 09:05:45] INFO service: Task 2006 step=transform completed
+[2025-10-01 09:05:46] INFO service: Task 2006 step=load completed
+[2025-10-01 09:05:46] INFO service: Task 2006 finished status=ok
+[2025-10-01 09:06:00] WARN db: Slow query detected SELECT analytics duration=1500ms
+[2025-10-01 09:06:05] INFO health: Heartbeat ok
+[2025-10-01 09:06:10] INFO monitoring: CPU usage=13% mem=37%
+[2025-10-01 09:06:15] INFO auth: User 207 authenticated successfully
+[2025-10-01 09:06:16] INFO service: Task 2007 started
+[2025-10-01 09:06:17] INFO cache: Cache hit for key=user:207
+[2025-10-01 09:06:18] INFO service: Task 2007 step=extract completed
+[2025-10-01 09:06:19] INFO db: Executed query SELECT details WHERE id=902 duration=19ms
+[2025-10-01 09:06:20] INFO service: Task 2007 step=transform completed
+[2025-10-01 09:06:21] INFO service: Task 2007 step=load completed
+[2025-10-01 09:06:21] INFO service: Task 2007 finished status=ok

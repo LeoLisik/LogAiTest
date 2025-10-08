@@ -1,0 +1,154 @@
+[2025-10-01 08:00:00] INFO auth: User 101 authenticated successfully
+[2025-10-01 08:00:01] INFO service: Task 1001 started
+[2025-10-01 08:00:01] INFO db: Connection established to db-primary:5432
+[2025-10-01 08:00:02] INFO cache: Cache hit for key=user:101
+[2025-10-01 08:00:03] INFO service: Task 1001 step=extract completed
+[2025-10-01 08:00:04] INFO io: Read file /data/input/1001.csv size=12KB
+[2025-10-01 08:00:05] INFO service: Task 1001 step=transform completed
+[2025-10-01 08:00:06] INFO db: Executed query SELECT orders WHERE id=2001 duration=23ms
+[2025-10-01 08:00:07] INFO service: Task 1001 step=load completed
+[2025-10-01 08:00:07] INFO service: Task 1001 finished status=ok
+[2025-10-01 08:01:00] INFO health: Heartbeat ok
+[2025-10-01 08:01:05] INFO auth: User 102 authenticated successfully
+[2025-10-01 08:01:06] INFO service: Task 1002 started
+[2025-10-01 08:01:07] INFO cache: Cache miss for key=product:501
+[2025-10-01 08:01:08] INFO io: Read file /data/input/1002.csv size=8KB
+[2025-10-01 08:01:09] INFO db: Executed query SELECT products WHERE id=501 duration=18ms
+[2025-10-01 08:01:10] INFO service: Task 1002 step=extract completed
+[2025-10-01 08:01:11] INFO service: Task 1002 step=transform completed
+[2025-10-01 08:01:12] INFO service: Task 1002 step=load completed
+[2025-10-01 08:01:12] INFO service: Task 1002 finished status=ok
+[2025-10-01 08:02:00] INFO health: Heartbeat ok
+[2025-10-01 08:02:05] INFO monitoring: CPU usage=12% mem=34%
+[2025-10-01 08:02:10] INFO auth: User 103 authenticated successfully
+[2025-10-01 08:02:11] INFO service: Task 1003 started
+[2025-10-01 08:02:12] INFO cache: Cache hit for key=product:501
+[2025-10-01 08:02:13] INFO service: Task 1003 step=extract completed
+[2025-10-01 08:02:14] INFO db: Executed query UPDATE orders SET status='ok' duration=31ms
+[2025-10-01 08:02:15] INFO service: Task 1003 step=transform completed
+[2025-10-01 08:02:16] INFO service: Task 1003 step=load completed
+[2025-10-01 08:02:16] INFO service: Task 1003 finished status=ok
+[2025-10-01 08:03:00] INFO health: Heartbeat ok
+[2025-10-01 08:03:05] INFO io: Wrote file /data/output/1001.parquet size=2MB
+[2025-10-01 08:03:10] INFO auth: User 104 authenticated successfully
+[2025-10-01 08:03:11] INFO service: Task 1004 started
+[2025-10-01 08:03:12] INFO cache: Cache hit for key=user:104
+[2025-10-01 08:03:13] INFO service: Task 1004 step=extract completed
+[2025-10-01 08:03:14] INFO db: Executed query SELECT users WHERE id=104 duration=20ms
+[2025-10-01 08:03:15] INFO service: Task 1004 step=transform completed
+[2025-10-01 08:03:16] INFO service: Task 1004 step=load completed
+[2025-10-01 08:03:16] INFO service: Task 1004 finished status=ok
+[2025-10-01 08:04:00] INFO health: Heartbeat ok
+[2025-10-01 08:04:05] INFO monitoring: CPU usage=13% mem=35%
+[2025-10-01 08:04:10] INFO auth: User 105 authenticated successfully
+[2025-10-01 08:04:11] INFO service: Task 1005 started
+[2025-10-01 08:04:12] INFO cache: Cache miss for key=product:502
+[2025-10-01 08:04:13] INFO io: Read file /data/input/1005.csv size=5KB
+[2025-10-01 08:04:14] INFO db: Executed query SELECT products WHERE id=502 duration=19ms
+[2025-10-01 08:04:15] INFO service: Task 1005 step=extract completed
+[2025-10-01 08:04:16] INFO service: Task 1005 step=transform completed
+[2025-10-01 08:04:17] INFO service: Task 1005 step=load completed
+[2025-10-01 08:04:17] INFO service: Task 1005 finished status=ok
+[2025-10-01 08:05:00] INFO health: Heartbeat ok
+[2025-10-01 08:05:05] INFO monitoring: CPU usage=11% mem=33%
+[2025-10-01 08:05:10] INFO auth: User 106 authenticated successfully
+[2025-10-01 08:05:11] INFO service: Task 1006 started
+[2025-10-01 08:05:12] INFO cache: Cache hit for key=product:502
+[2025-10-01 08:05:13] INFO service: Task 1006 step=extract completed
+[2025-10-01 08:05:14] INFO db: Executed query INSERT INTO logs duration=21ms
+[2025-10-01 08:05:15] INFO service: Task 1006 step=transform completed
+[2025-10-01 08:05:16] INFO service: Task 1006 step=load completed
+[2025-10-01 08:05:16] INFO service: Task 1006 finished status=ok
+[2025-10-01 08:06:00] INFO health: Heartbeat ok
+[2025-10-01 08:06:05] INFO io: Wrote file /data/output/1002.parquet size=1MB
+[2025-10-01 08:06:10] INFO auth: User 107 authenticated successfully
+[2025-10-01 08:06:11] INFO service: Task 1007 started
+[2025-10-01 08:06:12] INFO cache: Cache hit for key=user:107
+[2025-10-01 08:06:13] INFO service: Task 1007 step=extract completed
+[2025-10-01 08:06:14] INFO db: Executed query SELECT details WHERE id=300 duration=22ms
+[2025-10-01 08:06:15] INFO service: Task 1007 step=transform completed
+[2025-10-01 08:06:16] INFO service: Task 1007 step=load completed
+[2025-10-01 08:06:16] INFO service: Task 1007 finished status=ok
+[2025-10-01 08:07:00] INFO health: Heartbeat ok
+[2025-10-01 08:07:05] INFO monitoring: CPU usage=12% mem=34%
+[2025-10-01 08:07:10] INFO auth: User 108 authenticated successfully
+[2025-10-01 08:07:11] INFO service: Task 1008 started
+[2025-10-01 08:07:12] INFO cache: Cache miss for key=report:75
+[2025-10-01 08:07:13] INFO io: Read file /data/input/1008.csv size=16KB
+[2025-10-01 08:07:14] INFO db: Executed query SELECT reports WHERE id=75 duration=25ms
+[2025-10-01 08:07:15] INFO service: Task 1008 step=extract completed
+[2025-10-01 08:07:16] INFO service: Task 1008 step=transform completed
+[2025-10-01 08:07:17] INFO service: Task 1008 step=load completed
+[2025-10-01 08:07:17] INFO service: Task 1008 finished status=ok
+[2025-10-01 08:08:00] INFO health: Heartbeat ok
+[2025-10-01 08:08:05] INFO monitoring: CPU usage=13% mem=36%
+[2025-10-01 08:08:10] INFO auth: User 109 authenticated successfully
+[2025-10-01 08:08:11] INFO service: Task 1009 started
+[2025-10-01 08:08:12] INFO cache: Cache hit for key=report:75
+[2025-10-01 08:08:13] INFO service: Task 1009 step=extract completed
+[2025-10-01 08:08:14] INFO db: Executed query SELECT metrics WHERE id=88 duration=17ms
+[2025-10-01 08:08:15] INFO service: Task 1009 step=transform completed
+[2025-10-01 08:08:16] INFO service: Task 1009 step=load completed
+[2025-10-01 08:08:16] INFO service: Task 1009 finished status=ok
+[2025-10-01 08:09:00] INFO health: Heartbeat ok
+[2025-10-01 08:09:05] INFO io: Wrote file /data/output/1003.parquet size=4MB
+[2025-10-01 08:09:10] INFO auth: User 110 authenticated successfully
+[2025-10-01 08:09:11] INFO service: Task 1010 started
+[2025-10-01 08:09:12] INFO cache: Cache miss for key=order:220
+[2025-10-01 08:09:13] INFO db: Executed query SELECT order WHERE id=220 duration=30ms
+[2025-10-01 08:09:14] INFO service: Task 1010 step=extract completed
+[2025-10-01 08:09:15] INFO service: Task 1010 step=transform completed
+[2025-10-01 08:09:16] INFO service: Task 1010 step=load completed
+[2025-10-01 08:09:16] INFO service: Task 1010 finished status=ok
+[2025-10-01 08:10:00] INFO health: Heartbeat ok
+[2025-10-01 08:10:05] INFO monitoring: CPU usage=12% mem=34%
+[2025-10-01 08:10:10] INFO auth: User 111 authenticated successfully
+[2025-10-01 08:10:11] INFO service: Task 1011 started
+[2025-10-01 08:10:12] INFO cache: Cache hit for key=order:220
+[2025-10-01 08:10:13] INFO service: Task 1011 step=extract completed
+[2025-10-01 08:10:14] INFO db: Executed query UPDATE inventory duration=28ms
+[2025-10-01 08:10:15] INFO service: Task 1011 step=transform completed
+[2025-10-01 08:10:16] INFO service: Task 1011 step=load completed
+[2025-10-01 08:10:16] INFO service: Task 1011 finished status=ok
+[2025-10-01 08:11:00] INFO health: Heartbeat ok
+[2025-10-01 08:11:05] INFO io: Wrote file /data/output/1004.parquet size=3MB
+[2025-10-01 08:11:10] INFO auth: User 112 authenticated successfully
+[2025-10-01 08:11:11] INFO service: Task 1012 started
+[2025-10-01 08:11:12] INFO cache: Cache miss for key=report:76
+[2025-10-01 08:11:13] INFO io: Read file /data/input/1012.csv size=7KB
+[2025-10-01 08:11:14] INFO db: Executed query SELECT reports WHERE id=76 duration=24ms
+[2025-10-01 08:11:15] INFO service: Task 1012 step=extract completed
+[2025-10-01 08:11:16] INFO service: Task 1012 step=transform completed
+[2025-10-01 08:11:17] INFO service: Task 1012 step=load completed
+[2025-10-01 08:11:17] INFO service: Task 1012 finished status=ok
+[2025-10-01 08:12:00] INFO health: Heartbeat ok
+[2025-10-01 08:12:05] INFO monitoring: CPU usage=14% mem=36%
+[2025-10-01 08:12:10] INFO auth: User 113 authenticated successfully
+[2025-10-01 08:12:11] INFO service: Task 1013 started
+[2025-10-01 08:12:12] INFO cache: Cache hit for key=report:76
+[2025-10-01 08:12:13] INFO service: Task 1013 step=extract completed
+[2025-10-01 08:12:14] INFO db: Executed query SELECT events WHERE id=900 duration=16ms
+[2025-10-01 08:12:15] INFO service: Task 1013 step=transform completed
+[2025-10-01 08:12:16] INFO service: Task 1013 step=load completed
+[2025-10-01 08:12:16] INFO service: Task 1013 finished status=ok
+[2025-10-01 08:13:00] INFO health: Heartbeat ok
+[2025-10-01 08:13:05] INFO io: Wrote file /data/output/1005.parquet size=2MB
+[2025-10-01 08:13:10] INFO auth: User 114 authenticated successfully
+[2025-10-01 08:13:11] INFO service: Task 1014 started
+[2025-10-01 08:13:12] INFO cache: Cache hit for key=user:114
+[2025-10-01 08:13:13] INFO service: Task 1014 step=extract completed
+[2025-10-01 08:13:14] INFO db: Executed query SELECT metrics WHERE id=91 duration=20ms
+[2025-10-01 08:13:15] INFO service: Task 1014 step=transform completed
+[2025-10-01 08:13:16] INFO service: Task 1014 step=load completed
+[2025-10-01 08:13:16] INFO service: Task 1014 finished status=ok
+[2025-10-01 08:14:00] INFO health: Heartbeat ok
+[2025-10-01 08:14:05] INFO monitoring: CPU usage=12% mem=35%
+[2025-10-01 08:14:10] INFO auth: User 115 authenticated successfully
+[2025-10-01 08:14:11] INFO service: Task 1015 started
+[2025-10-01 08:14:12] INFO cache: Cache miss for key=order:221
+[2025-10-01 08:14:13] INFO db: Executed query SELECT order WHERE id=221 duration=27ms
+[2025-10-01 08:14:14] INFO service: Task 1015 step=extract completed
+[2025-10-01 08:14:15] INFO service: Task 1015 step=transform completed
+[2025-10-01 08:14:16] INFO service: Task 1015 step=load completed
+[2025-10-01 08:14:16] INFO service: Task 1015 finished status=ok
+[2025-10-01 08:15:00] INFO health: Heartbeat ok
