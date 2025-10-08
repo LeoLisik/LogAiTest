@@ -58,6 +58,6 @@ anomalies = 0
 for index, score in enumerate(scores):
     if score > threshold:
         anomalies += 1
-        print(f"Обнаружено аномальное окно, строка {index}")
+        print(f"Обнаружено аномальное окно, строки {index} - {index + window_size}")
 
 print(f"Detected anomalies: {anomalies} of {len(X_test)} windows")
